@@ -1,9 +1,10 @@
 from fastapi import APIRouter
-from authentication.dependencies.fastapi_users_router import fastapi_users_router
-from authentication.dependencies.backend import auth_backend
+from payapi.authentication.dependencies.fastapi_users_router import fastapi_users_router
+from payapi.authentication.dependencies.backend import auth_backend
+from payapi.users.schemas import UserUpdate, UserRead
 
-auth_users_router = APIRouter(prefix="/auth", tags=["auth"])
+users_router = APIRouter(prefix="/users", tags=["users"])
 
-auth_users_router.include_router(
-    router=fastapi_users_router.get_auth_router(auth_backend)
+users_router.include_router(
+    fastapi_users_router.get_users_router(UserRead, UserUpdate),
 )
