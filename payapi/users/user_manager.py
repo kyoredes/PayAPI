@@ -1,7 +1,7 @@
 from fastapi_users.manager import BaseUserManager
-from config import settings
+from payapi.config import settings
 from fastapi_users import UUIDIDMixin
-from users.models import User
+from payapi.users.models import User
 import uuid
 from typing import Optional
 from fastapi import Request

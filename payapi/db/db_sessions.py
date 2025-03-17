@@ -3,7 +3,7 @@ from sqlalchemy.ext.asyncio import (
     async_sessionmaker,
     async_scoped_session,
 )
-from config import settings
+from payapi.config import settings
 import asyncio
 
 

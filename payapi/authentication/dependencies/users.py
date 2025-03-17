@@ -4,9 +4,9 @@ if TYPE_CHECKING:
     from sqlalchemy.ext.asyncio import AsyncSession
 
 from fastapi import Depends
-from db.db_sessions import db_session_manager
+from payapi.db.db_sessions import db_session_manager
 from fastapi_users.db import SQLAlchemyUserDatabase
-from users.models import User
+from payapi.users.models import User
 from typing import Annotated
 
 

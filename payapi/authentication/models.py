@@ -1,5 +1,5 @@
 from fastapi_users_db_sqlalchemy.access_token import SQLAlchemyBaseAccessTokenTableUUID
-from base_models import Base
+from payapi.base_models import Base
 from sqlalchemy.orm import declared_attr
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import ForeignKey
